@@ -1,7 +1,7 @@
 const canvas = document.querySelector("#system-map");
-const ctx = canvas.getContext("2d");
+const ctx = canvas?.getContext("2d");
 const nodes = [];
-const nodeCount = 34;
+const nodeCount = 48;
 
 function resize() {
   const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
@@ -19,9 +19,9 @@ function createNodes() {
     nodes.push({
       x: Math.random() * window.innerWidth,
       y: Math.random() * window.innerHeight,
-      vx: (Math.random() - 0.5) * 0.22,
-      vy: (Math.random() - 0.5) * 0.22,
-      size: Math.random() * 2.2 + 2,
+      vx: (Math.random() - 0.5) * 0.15,
+      vy: (Math.random() - 0.5) * 0.15,
+      size: Math.random() * 2.5 + 2.5,
     });
   }
 }
@@ -33,10 +33,10 @@ function draw() {
     node.x += node.vx;
     node.y += node.vy;
 
-    if (node.x < -30) node.x = window.innerWidth + 30;
-    if (node.x > window.innerWidth + 30) node.x = -30;
-    if (node.y < -30) node.y = window.innerHeight + 30;
-    if (node.y > window.innerHeight + 30) node.y = -30;
+    if (node.x < -40) node.x = window.innerWidth + 40;
+    if (node.x > window.innerWidth + 40) node.x = -40;
+    if (node.y < -40) node.y = window.innerHeight + 40;
+    if (node.y > window.innerHeight + 40) node.y = -40;
 
     for (let next = index + 1; next < nodes.length; next += 1) {
       const other = nodes[next];
@@ -44,9 +44,9 @@ function draw() {
       const dy = node.y - other.y;
       const distance = Math.hypot(dx, dy);
 
-      if (distance < 190) {
-        ctx.strokeStyle = `rgba(15, 118, 110, ${0.2 - distance / 1000})`;
-        ctx.lineWidth = 1;
+      if (distance < 200) {
+        ctx.strokeStyle = `rgba(15, 118, 110, ${0.35 - distance / 600})`;
+        ctx.lineWidth = 1.2;
         ctx.beginPath();
         ctx.moveTo(node.x, node.y);
         ctx.lineTo(other.x, other.y);
@@ -54,7 +54,7 @@ function draw() {
       }
     }
 
-    ctx.fillStyle = "rgba(11, 79, 73, 0.7)";
+    ctx.fillStyle = "rgba(11, 79, 73, 0.8)";
     ctx.beginPath();
     ctx.arc(node.x, node.y, node.size, 0, Math.PI * 2);
     ctx.fill();
@@ -63,11 +63,54 @@ function draw() {
   requestAnimationFrame(draw);
 }
 
-window.addEventListener("resize", () => {
+if (ctx) {
+  window.addEventListener("resize", () => {
+    resize();
+    createNodes();
+  });
+
   resize();
   createNodes();
-});
+  draw();
+}
 
-resize();
-createNodes();
-draw();
+const sections = document.querySelectorAll("[data-animate]");
+const navLinks = document.querySelectorAll("nav a");
+
+if ("IntersectionObserver" in window) {
+  document.body.classList.add("animations-ready");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { rootMargin: "0px 0px -10% 0px", threshold: 0.05 }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+} else {
+  sections.forEach((section) => section.classList.add("visible"));
+}
+
+function updateActiveNav() {
+  let current = "";
+
+  document.querySelectorAll("section[id]").forEach((section) => {
+    const rect = section.getBoundingClientRect();
+    if (rect.top <= window.innerHeight / 3) {
+      current = section.id;
+    }
+  });
+
+  navLinks.forEach((link) => {
+    link.classList.toggle("active", link.getAttribute("href") === `#${current}`);
+  });
+}
+
+window.addEventListener("scroll", updateActiveNav, { passive: true });
+updateActiveNav();
