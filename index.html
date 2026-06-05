@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Developer portfolio for Ahmed: Laravel APIs, payment operations, React/Inertia products, Flutter apps, multi-tenant systems, finance workflows, and integration tooling."
+    />
+    <title>Ahmed | Backend & Product Developer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="system-map" aria-hidden="true"></canvas>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Ahmed portfolio home">
+        <span class="brand-mark">A</span>
+        <span>Ahmed</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#systems">Systems</a>
+        <a href="#stack">Stack</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="hero-copy">
+          <p class="eyebrow">Full Stack Developer</p>
+          <h1>Laravel, React, and Flutter systems for real operations.</h1>
+          <p class="hero-text">
+            I build scalable web platforms, APIs, React dashboards, and Flutter
+            apps, with a strong backend focus in Laravel, Livewire, MySQL,
+            payment flows, payroll systems, and operational workflows.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#work">View projects</a>
+            <a class="button secondary" href="mailto:ahmedmahmood208@gmail.com">Email</a>
+            <a class="button secondary" href="https://github.com/ahrmerd">GitHub</a>
+          </div>
+        </div>
+
+        <aside class="signal-panel" aria-label="Backend focus summary">
+          <div class="signal-grid">
+            <article>
+              <span>Experience</span>
+              <strong>3+ years</strong>
+            </article>
+            <article>
+              <span>Scale</span>
+              <strong>40,000+ users</strong>
+            </article>
+            <article>
+              <span>Core</span>
+              <strong>Laravel</strong>
+            </article>
+            <article>
+              <span>Also</span>
+              <strong>Flutter</strong>
+            </article>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section intro" aria-label="Profile">
+        <div>
+          <p class="section-kicker">Profile</p>
+          <h2>Product work with backend depth.</h2>
+        </div>
+        <p>
+          I have 3+ years of experience building scalable web platforms and APIs.
+          My strongest work is in Laravel projects where business rules drive the
+          system: organization provisioning, payroll logic, gateway integrations,
+          invoice filters, transaction logs, role-based access, OAuth, HR
+          workflows, admin dashboards, and API documentation. I also ship React,
+          Livewire, Vue, Next.js, and Flutter interfaces where the product needs
+          more than an API.
+        </p>
+      </section>
+
+      <section id="work" class="section">
+        <div class="section-heading">
+          <p class="section-kicker">Selected Work</p>
+          <h2>Projects with real product and backend substance</h2>
+        </div>
+
+        <div class="projects">
+          <article class="project-card featured">
+            <div class="project-meta">
+              <span>Payments</span>
+              <a href="https://github.com/PayPro-Solutions/paypro_connect">GitHub</a>
+            </div>
+            <h3>DirectPay</h3>
+            <p>
+              Multi-tenant payment operations platform with a central admin
+              domain, organization subdomains, per-tenant databases, batch
+              workflows, gateway integrations, workers, and scheduled reconciliation.
+            </p>
+            <ul>
+              <li>Central and tenant database architecture</li>
+              <li>CoralPay and Interswitch gateway work, with room for more providers</li>
+              <li>Queue-backed processing for production workflows</li>
+            </ul>
+          </article>
+
+          <article class="project-card featured">
+            <div class="project-meta">
+              <span>HR Platform</span>
+              <a href="https://github.com/PayPro-Solutions/paypro_hr">GitHub</a>
+            </div>
+            <h3>PayPro HR</h3>
+            <p>
+              Full-stack Laravel and React HR operations platform covering leave
+              requests, leave balances, approval workflows, employee management,
+              date formatting consistency, and admin-facing operational pages.
+            </p>
+            <ul>
+              <li>Laravel backend with React/Inertia product screens</li>
+              <li>Leave balances, approvals, departments, and workflow feedback</li>
+              <li>Pest, Pint, PHPStan, type checks, and CI-oriented scripts</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="project-meta">
+              <span>Legal Tech</span>
+              <a href="https://github.com/Reposebay685/legal-hub-backend">GitHub</a>
+            </div>
+            <h3>Legal Hub Backend</h3>
+            <p>
+              Laravel 12 API for client, lawyer, and admin workflows with Passport
+              auth, Google OAuth, payments, gateway webhooks, transaction logs,
+              lawyer wallets, payout methods, and payout requests.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-meta">
+              <span>Payroll</span>
+              <a href="https://github.com/raboti/works-and-persons">GitHub</a>
+            </div>
+            <h3>Persons / Works and Persons</h3>
+            <p>
+              Tenant-aware payroll and personnel platform with backup and restore
+              commands, tenant migration tooling, payroll services, payslip
+              generation, imports, approvals, logging, and merge operations.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-meta">
+              <span>Education</span>
+              <a href="https://github.com/ahrmerd/tesis">GitHub</a>
+            </div>
+            <h3>Tesis</h3>
+            <p>
+              Laravel and React education portal work with finance invoice
+              routing, e-learning settings, application fee schedules,
+              announcements, data management screens, and portal navigation.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-meta">
+              <span>Flutter</span>
+              <a href="https://github.com/ahrmerd/in_expense">GitHub</a>
+            </div>
+            <h3>in_expense</h3>
+            <p>
+              Flutter finance app with dashboard summaries, accounts,
+              transactions, budgets, debts, collectibles, contacts, categories,
+              audit trails, providers, API client services, and reusable UI widgets.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-meta">
+              <span>Embedded</span>
+              <span>Arduino / C</span>
+            </div>
+            <h3>Automatic Liquid Filling System</h3>
+            <p>
+              IoT-enabled liquid filling project built with Arduino and C for
+              hardware control, paired with a Flutter interface for monitoring
+              and control. The work connected embedded logic, sensors/actuators,
+              and a practical mobile control surface.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-meta">
+              <span>Reposebay HR</span>
+              <a href="https://github.com/Reposebay685/joseph-castle-backend">GitHub</a>
+            </div>
+            <h3>Joseph Castle Backend</h3>
+            <p>
+              Management and audit API for customer orders, dispatches, financial
+              transactions, invoices, reconciliation, customer funding, and admin
+              controls.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-meta">
+              <span>Developer Tool</span>
+              <a href="https://github.com/ahrmerd/webhook-box">GitHub</a>
+            </div>
+            <h3>Webhook Box</h3>
+            <p>
+              Single-user webhook catcher for capturing request method, headers,
+              body, IP, and time, then exporting payloads as JSON or replayable
+              cURL commands.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="section experience">
+        <div class="section-heading">
+          <p class="section-kicker">Experience</p>
+          <h2>Recent engineering work</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-card">
+            <div class="project-meta">
+              <span>Hans and Cadi</span>
+              <span>Kaduna, Nigeria</span>
+            </div>
+            <h3>Full Stack Developer</h3>
+            <p class="timeline-date">January 2024 - Present</p>
+            <ul>
+              <li>Lead maintainer for legacy PHP school portals serving more than 40,000 active students.</li>
+              <li>Optimized legacy PHP systems with better data storage, pagination, and N+1 query fixes.</li>
+              <li>Improved performance by 60%+ and reduced bandwidth usage by 50% across tertiary institution systems.</li>
+              <li>Built HR/payroll workflows for salary structures, statutory deductions, cooperative deductions, and employment lifecycle data.</li>
+              <li>Mentored junior developers on web fundamentals and backend best practices.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-card">
+            <div class="project-meta">
+              <span>Reposebay HR</span>
+              <span>Remote</span>
+            </div>
+            <h3>Backend Developer</h3>
+            <p class="timeline-date">August 2025 - Present</p>
+            <ul>
+              <li>Backend lead on Legal Hub APIs for task workflows, document approvals, lawyer-client interactions, messaging, and notifications.</li>
+              <li>Worked on Joseph Castle backend features for customer orders, dispatches, invoices, reconciliation, and finance workflows.</li>
+              <li>Built API services for an e-learning platform covering course delivery, tutor profiles, enrollment, payments, and role-based access.</li>
+              <li>Prepared Swagger/OpenAPI documentation for partner and frontend consumption.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section research-section" aria-label="Research and education">
+        <div class="research-card">
+          <p class="section-kicker">Research</p>
+          <h2>Automatic arrhythmia classification with signal processing and TinyML.</h2>
+          <p>
+            Processed ECG data from PhysioNet in MATLAB, built heartbeat detection
+            logic with 99.55% sensitivity and 99.73% positive predictive value,
+            benchmarked against Pan-Tompkins, and deployed a CNN/DNN model on a
+            Raspberry Pi Pico with 85% accuracy and sub-150 ms inference latency.
+          </p>
+        </div>
+
+        <div class="education-card">
+          <p class="section-kicker">Education</p>
+          <article>
+            <h3>B.Eng Mechatronics and Systems Engineering</h3>
+            <p>Abubakar Tafawa Balewa University, Bauchi</p>
+            <span>August 2016 - August 2023</span>
+          </article>
+          <article>
+            <h3>B.Sc Information Technology</h3>
+            <p>International Open University, Gambia</p>
+            <span>September 2021 - April 2025</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="systems" class="section systems">
+        <div class="section-heading">
+          <p class="section-kicker">Systems</p>
+          <h2>Capabilities I can show in code</h2>
+        </div>
+        <div class="capabilities">
+          <article>
+            <h3>API Design</h3>
+            <p>Versioned routes, request validation, resource responses, and documented handoff standards.</p>
+          </article>
+          <article>
+            <h3>Auth & Access</h3>
+            <p>Passport auth, OAuth login, admin roles, organization users, and protected workflows.</p>
+          </article>
+          <article>
+            <h3>Payments</h3>
+            <p>Payment initialization, verification, callbacks, gateway logs, wallet balances, payouts, and provider expansion.</p>
+          </article>
+          <article>
+            <h3>Product Surfaces</h3>
+            <p>React dashboards, Inertia pages, Flutter screens, reusable UI widgets, and API-backed mobile workflows.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="stack" class="section stack-section">
+        <div>
+          <p class="section-kicker">Stack</p>
+          <h2>Tools I use most</h2>
+        </div>
+        <div class="stack-list" aria-label="Technical stack">
+          <span>PHP 8+</span>
+          <span>Laravel</span>
+          <span>Livewire</span>
+          <span>React</span>
+          <span>Vue</span>
+          <span>Next.js</span>
+          <span>Inertia</span>
+          <span>TypeScript</span>
+          <span>Flutter</span>
+          <span>Dart</span>
+          <span>Arduino</span>
+          <span>C</span>
+          <span>MySQL</span>
+          <span>PostgreSQL</span>
+          <span>SQLite</span>
+          <span>Firebase</span>
+          <span>Passport</span>
+          <span>Socialite</span>
+          <span>Swagger/OpenAPI</span>
+          <span>Pest</span>
+          <span>Queues</span>
+          <span>Schedulers</span>
+          <span>REST APIs</span>
+          <span>Multi-tenancy</span>
+          <span>Payment gateways</span>
+          <span>GitHub</span>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div>
+          <p class="section-kicker">Contact</p>
+          <h2>Need a product backend that can survive real business rules?</h2>
+          <p>
+            I am based in Kaduna, Nigeria, and work across backend-heavy full
+            stack systems, mobile finance tools, API integrations, and operational
+            platforms.
+          </p>
+        </div>
+        <div class="contact-actions">
+          <a class="button primary" href="https://github.com/ahrmerd">github.com/ahrmerd</a>
+          <a class="button secondary" href="mailto:ahmedmahmood208@gmail.com">ahmedmahmood208@gmail.com</a>
+          <a class="button secondary" href="tel:+2349030685318">+234 903 068 5318</a>
+          <a class="button secondary" href="https://www.linkedin.com/in/ahmed-mahmood-b19490219">LinkedIn</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Mahmood Ahmed Adamu</span>
+      <span>Full stack systems, APIs, mobile apps, and integrations.</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
