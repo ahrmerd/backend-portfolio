@@ -10,6 +10,8 @@ research, education, and integration tooling.
 - `index.html` - page structure and portfolio content
 - `styles.css` - responsive visual design
 - `script.js` - lightweight animated backend system map
+- `Mahmood_Ahmed_05-06-2026 Resume.pdf` - linked resume/CV
+- `resume.md` - editable resume draft
 
 ## Run locally
 
@@ -23,5 +25,5 @@ Then visit `http://127.0.0.1:5173`.
 
 ## Before publishing
 
-- Add a resume download link if desired.
+- Replace the PDF when a newer resume/CV is ready, then update the matching link in `index.html`.
 - Keep project descriptions honest and update private repo links if public viewers cannot access them.
